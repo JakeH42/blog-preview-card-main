@@ -1,0 +1,157 @@
+/* ===================================
+   Import Fonts
+   =================================== */
+@font-face {
+  font-family: 'Figtree';
+  src: url('../fonts/Figtree-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Figtree Bold';
+  src: url('../fonts/Figtree-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+/* ===================================
+   CSS Variables
+   =================================== */
+
+:root {
+    /* Colors */
+    --primary-400: hsl(47, 88%, 63%);
+
+    --white: hsl(0, 0%, 100%);
+
+    --base-500: hsl(0, 0%, 42%);
+    --base-900: hsl(0, 0%, 7%);
+
+    /* Typography */
+    --text-400: 500 clamp(13px, 1.2vw, 14px) / 1.5 'Figtree', sans-serif;
+    --text-500: 500 clamp(14px, 1.4vw, 16px) / 1.5 'Figtree', sans-serif;
+    --text-700: 800 clamp(13px, 1.2vw, 14px) / 1.5 'Figtree Bold', sans-serif;
+
+    --text-heading: 800 clamp(20px, 2vw, 24px) / 1.5 'Figtree Bold', sans-serif;
+
+    --letter-spacing-s: 0px;
+
+    /* Spacing */
+    --space-xs: clamp(3px, 1vw, 4px);   /* Base ~16px */
+    --space-s: clamp(6px, 1vw, 8px);   /* Base ~16px */
+    --space-m: clamp(9px, 1.5vw, 12px); /* Base ~24px */
+    --space-l: clamp(16px, 2vw, 24px);   /* Base ~40px */
+
+    /* Border Radius */
+    --radius-xs: 4px;
+    --radius-m: 10px;
+    --radius-l: 20px;
+
+    /* Box Shadow */
+    --box-shadow-solid: 7px 7px 0px rgba(0, 0, 0, 1); 
+}
+
+/* ===================================
+   Global Styles
+   =================================== */
+body {
+    font: var(--text-500);
+    letter-spacing: var(--letter-spacing-s);
+    background-color: var(--primary-400);
+    color: var(--base-900);
+}
+
+h1, h2, h3, h4, h5 {
+    font: var(--text-heading);
+}
+
+p {
+    color: var(--base-500);
+}
+
+.section {
+    height: 100dvh;
+}
+
+.container {
+    max-width: 1440px;
+}
+
+/* ===================================
+   Utilities
+   =================================== */
+.grid {
+    display: grid;
+}
+
+.grid-center-items {
+    height: 100%;
+    place-items: center;
+}
+
+/* ===================================
+   Components
+   =================================== */
+
+/* Blog card */
+.blog-card {
+    display: grid;
+    max-width: 375px;
+    gap: calc(var(--space-l) * 0.75);
+    padding: var(--space-l);
+    background-color: var(--white);
+    border-radius: var(--radius-l);
+    border: 2px solid var(--base-900);
+    box-shadow: var(--box-shadow-solid);
+}
+
+.blog-card__media {
+    border-radius: var(--radius-m);
+}
+
+.blog-card__body {
+    display: grid;
+    gap: var(--space-m);
+}
+
+.blog-card__meta-tag {
+    display: grid;
+    gap: var(--space-m);
+}
+
+.blog-card__meta-publish-date {
+    font: var(--text-400);
+}
+
+.blog-card__auth-section {
+    display: flex;
+    align-items: center;
+    gap: var(--space-m);
+}
+
+.blog-card__auth-pic-wrapper {
+    max-width: 32px;
+}
+
+.blog-card__auth-name {
+    font: var(--text-700);
+}
+
+
+
+/* Buttons */
+.button {
+    justify-self: start;
+    text-decoration: none;
+    line-height: 0;
+    border-radius: 0.25em;
+    padding: 0.25em 0.75em;
+}
+
+.button--primary {
+    background-color: var(--primary-400);
+    color: var(--base-900);
+}
+
+.button--s {
+    font: var(--text-700);
+}
