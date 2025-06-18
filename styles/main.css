@@ -122,6 +122,15 @@ p {
     font: var(--text-400);
 }
 
+.blog-card__title > a {
+    text-decoration: none;
+    color: initial;
+}
+
+.blog-card__title > a:hover {
+    color: var(--primary-400);
+}
+
 .blog-card__auth-section {
     display: flex;
     align-items: center;
@@ -144,7 +153,7 @@ p {
     text-decoration: none;
     line-height: 0;
     border-radius: 0.25em;
-    padding: 0.25em 0.75em;
+    padding: 0.25em 1em;
 }
 
 .button--primary {
